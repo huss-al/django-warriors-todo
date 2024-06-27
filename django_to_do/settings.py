@@ -31,7 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
-    '8000-hussal-djangowarriorsto-dje5jnpuc6o.ws-eu114.gitpod.io',
+    '8000-hussal-djangowarriorsto-6swwmva6y1n.ws-eu114.gitpod.io',
+    '8000-hussal-djangowarriorsto-5vz967jljk8.ws.codeinstitute-ide.net',
     'localhost',
     '127.0.0.1',
 ]
