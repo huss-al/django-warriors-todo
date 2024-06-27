@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     '.herokuapp.com',
     '8000-hussal-djangowarriorsto-6swwmva6y1n.ws-eu114.gitpod.io',
     '8000-hussal-djangowarriorsto-965yqnl9owp.ws.codeinstitute-ide.net',
+    '8000-hussal-djangowarriorsto-5vz967jljk8.ws.codeinstitute-ide.net',
     'localhost',
     '127.0.0.1',
 ]

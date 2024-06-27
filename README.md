@@ -5,67 +5,53 @@ Django Warriors
 Our To-Do List application is a user-friendly web application built with Django, designed to help individuals manage their tasks efficiently. Users can easily register and log in to create, update, and track their tasks. Each task can be marked with statuses such as "To Do", "In Progress", and "Completed" to reflect its current state. The application ensures that only the user who created a task can modify its details, providing a personalized and secure task management experience. With a clean and intuitive interface, users can focus on completing their tasks and achieving their goals effectively.
 
 
-## Features 
+## Features to be implemented
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+Tasks Board: Create your tasks in one place.
+Task Status: Pick out of 3 statuses, 1 = todo 2 = In progress 3 = Done
 
 ### Existing Features
 
 - __Navigation Bar__
 
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+Based in the base.html which can be adated to any html page we want to view.
 
-![Nav Bar](https://github.com/lucyrush/readme-template/blob/master/media/love_running_nav.png)
+# Wireframes
 
-- __The landing page image__
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.29.24.png" width="600" height="100%">
+</p>
 
-  - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would be applicable to. 
-  - This section introduces the user to Love Running with an eye catching animation to grab their attention
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.29.51.png" width="600" height="100%">
+</p>
 
-![Landing Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_landing.png)
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.30.28.png" width="600" height="100%">
+</p>
 
-- __Club Ethos Section__
-
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise. 
-
-![Club Ethos](https://github.com/lucyrush/readme-template/blob/master/media/love_running_ethos.png)
-
-- __Meetup Times section__
-
-  - This section will allow the user to see exactly when the meetups will happen, where they will be located and how long the run will be in kilometers. 
-  - This section will be updated as these times change to keep the user up to date. 
-
-![Meetup Times](https://github.com/lucyrush/readme-template/blob/master/media/love_running_times.png)
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.30.56.png" width="600" height="100%">
+</p>
 
 - __The Footer__ 
 
-  - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
-
-![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
-
-- __Gallery__
-
-  - The gallery will provide the user with supporting images to see what the meet ups look like. 
-  - This section is valuable to the user as they will be able to easily identify the types of events the organisation puts together. 
-
-![Gallery](https://github.com/lucyrush/readme-template/blob/master/media/love_running_gallery.png)
+  - The footer section includes links to the relevant social media sites. The links will open to a new tab to allow easy navigation for the user. 
+  - The footer is valuable to the user as it encourages them to keep connected via social media.
+ 
+    PICTURE TO BE INSERTED********
+    
 
 - __The Sign Up Page__
 
-  - This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address. 
+This is where a user can register to use the app. The user will only be able to see his/her tasks and not anyone elses. 
 
-![Sign Up](https://github.com/lucyrush/readme-template/blob/master/media/love_running_signup.png)
+    PICTURE TO BE INSERTED********
 
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
 
-- Another feature idea
+- Create mini tasks for each main task
 
 ## Testing 
 
@@ -91,35 +77,22 @@ You will need to mention unfixed bugs and why they were not fixed. This section 
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+This website was deployed through Heroku:
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+- create a project
+- link project to github repository
+- convig VAR
+- deploy branch
 
-The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html 
+    PICTURE TO BE INSERTED********
 
 
 ## Credits 
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
+- chatGPT
+- stackoverflow
+- 
 
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
-
-
-Congratulations on completing your Readme, you have made another big stride in the direction of being a developer! 
 
 ## Other General Project Advice
 
