@@ -148,8 +148,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/to_do/'
+LOGIN_REDIRECT_URL = 'home'  # Replace 'home' with your actual redirect URL
+
 
 # Redirect to login URL if not logged in
 LOGIN_URL = '/log_in/'
