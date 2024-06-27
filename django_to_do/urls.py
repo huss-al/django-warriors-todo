@@ -16,10 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from to_do import views as index_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_views.index, name='index'),
-    path('todo/', include('to_do.urls')),  # Include app-specific URLs
+    path('', include("to_do.urls"), name='to_do_urls'),
 ]
