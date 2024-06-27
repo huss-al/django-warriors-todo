@@ -22,6 +22,18 @@ Based in the base.html which can be adated to any html page we want to view.
 <img src="Screenshot 2024-06-27 at 11.29.24.png" width="600" height="100%">
 </p>
 
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.29.51.png" width="600" height="100%">
+</p>
+
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.30.28.png" width="600" height="100%">
+</p>
+
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.30.56.png" width="600" height="100%">
+</p>
+
 - __The Footer__ 
 
   - The footer section includes links to the relevant social media sites. The links will open to a new tab to allow easy navigation for the user. 
