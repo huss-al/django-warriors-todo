@@ -1,11 +1,4 @@
-header {
-    position: absolute;
-    margin-top: 0;
-    width: 100vw;
-    top:0;
-    height: 8vh;
-    background-color: grey;
-}
+
 body {
     background-color: whitesmoke;
     margin: 0;
@@ -14,37 +7,42 @@ body {
 
 }
 .title-block {
-    position: relative;
-    top: 8vh;
-    height: 8vh;
     align-content: center;
 }
 body>div {
     text-align: center;
     margin: 0;
+    align-items: flex-end;
 }
 h1,h2 {
     margin: 0;
 }
-.post-container {
-    position: absolute;
-    top: 16vh;
+#tasks-container {
+
+}
+.task-container {
     justify-content: center;
+}
+.to-do {
+    background-color: aquamarine;
+}
+.started {
+    background-color: yellow;
+}
+.complete {
+    background-color: yellowgreen;
 }
 
 .post-block {
     border: 2px;
     border-style: solid;
-    border-color: blue;
+    border-color: black;
     width: 100vw;
 
 }
-footer {
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
-    height: 8vh;
+.edit {
+    background-color: antiquewhite;
+}
+.delete {
     background-color: grey;
 }
-    
-    

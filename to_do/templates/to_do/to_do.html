@@ -12,33 +12,80 @@
 </head>
 
 <body>
-    <header>
-        <h2>logo, navbar</h2>
-    </header>
-    
+
     <div class="title-block">
         <h1>Posts list</h1>
     </div>
     
-    <div class="post-container">
-        {% for post in object_list %}
-        <div class="post-block">
-            <div>
-               <h2>{{post.title}}</h2> 
+    <div id="tasks-container">
+        <div class="to-do task-container">
+            <h1>To do</h1>
+            {% for post in object_list %}
+            <div class="post-block">
+                <div>
+                <h2>{{post.title}}</h2> 
+                </div>
+                <div>
+                    <p>{{post.excerpt}}</p>
+                </div>
+                <div>
+                    <p>Author: {{post.author}}</p>
+                </div>
+                <div>
+                    <span class="edit">edit</span>
+                    <span class="started">Mark as</span>
+                    <span class="complete">Mark as</span>
+                    <span class="delete">delete</span>
+                </div>
             </div>
-            <div>
-                 <p>{{post.excerpt}}</p>
-            </div>
-            <div>
-                <p>Author: {{post.author}}</p>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+
+        <div class="started task-container">
+            <h1>Started</h1>
+            {% for post in object_list %}
+            <div class="post-block">
+                <div>
+                <h2>{{post.title}}</h2> 
+                </div>
+                <div>
+                    <p>{{post.excerpt}}</p>
+                </div>
+                <div>
+                    <p>Author: {{post.author}}</p>
+                </div>
+                <div>
+                    <span class="edit">edit</span>
+                    <span class="to-do">Mark as</span>
+                    <span class="complete">Mark as</span>
+                    <span class="delete">delete</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="complete task-container">
+            <h1>Complete</h1>
+            {% for post in object_list %}
+            <div class="post-block">
+                <div>
+                <h2>{{post.title}}</h2> 
+                </div>
+                <div>
+                    <p>{{post.excerpt}}</p>
+                </div>
+                <div>
+                    <p>Author: {{post.author}}</p>
+                </div>
+                <div>
+                    <span class="edit">edit</span>
+                    <span class="to-do">Mark as</span>
+                    <span class="started">Mark as</span>
+                    <span class="delete">delete</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
     
-   
-</body>
-<footer>
-    <h2>footer</h2>
-</footer>
 </html>
