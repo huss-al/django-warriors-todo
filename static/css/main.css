@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: blueviolet;
+}
+
+header {
+    margin-top: 0;
+    background-color: bisque;
+}
+
+h2 {
+    margin: 0;
+}
+
+.post-block {
+    border-color: blue;
+}
