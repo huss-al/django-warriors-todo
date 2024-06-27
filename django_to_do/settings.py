@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '.herokuapp.com',
     '8000-hussal-djangowarriorsto-6swwmva6y1n.ws-eu114.gitpod.io',
+    '8000-hussal-djangowarriorsto-x9s0in6m788.ws.codeinstitute-ide.net'
     'localhost',
     '127.0.0.1',
 ]
@@ -97,6 +98,7 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://8000-hussal-djangowarriorsto-6swwmva6y1n.ws-eu114.gitpod.io",
+    "https://8000-hussal-djangowarriorsto-x9s0in6m788.ws.codeinstitute-ide.net"
     "https://*.herokuapp.com"
 ]
 
