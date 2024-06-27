@@ -18,7 +18,9 @@ Based in the base.html which can be adated to any html page we want to view.
 
 # Wireframes
 
-PICTURES TO BE INSERTED********
+<p align="center">
+<img src="Screenshot 2024-06-27 at 11.29.24.png" width="600" height="100%">
+</p>
 
 - __The Footer__ 
 
