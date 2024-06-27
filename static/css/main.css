@@ -1,17 +1,50 @@
-body {
-    margin: 0;
-    background-color: blueviolet;
-}
-
 header {
+    position: absolute;
     margin-top: 0;
-    background-color: bisque;
+    width: 100vw;
+    top:0;
+    height: 8vh;
+    background-color: grey;
 }
-
-h2 {
+body {
+    background-color: whitesmoke;
     margin: 0;
+    top: 0;
+    align-content: flex-start;
+
+}
+.title-block {
+    position: relative;
+    top: 8vh;
+    height: 8vh;
+    align-content: center;
+}
+body>div {
+    text-align: center;
+    margin: 0;
+}
+h1,h2 {
+    margin: 0;
+}
+.post-container {
+    position: absolute;
+    top: 16vh;
+    justify-content: center;
 }
 
 .post-block {
+    border: 2px;
+    border-style: solid;
     border-color: blue;
+    width: 100vw;
+
 }
+footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    height: 8vh;
+    background-color: grey;
+}
+    
+    

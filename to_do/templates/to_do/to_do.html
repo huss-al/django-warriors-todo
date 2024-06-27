@@ -16,21 +16,29 @@
         <h2>logo, navbar</h2>
     </header>
     
-    <div>
+    <div class="title-block">
         <h1>Posts list</h1>
     </div>
     
-    <div>
+    <div class="post-container">
         {% for post in object_list %}
-        <h2>{{post.title}}</h2>
-        <p>{{post.excerpt}}</p>
-        <p>Author: {{post.author}}</p>
+        <div class="post-block">
+            <div>
+               <h2>{{post.title}}</h2> 
+            </div>
+            <div>
+                 <p>{{post.excerpt}}</p>
+            </div>
+            <div>
+                <p>Author: {{post.author}}</p>
+            </div>
+        </div>
         {% endfor %}
     </div>
     
-    <footer>
-        <h2>footer</h2>
-    </footer>
+   
 </body>
-
+<footer>
+    <h2>footer</h2>
+</footer>
 </html>
