@@ -1,0 +1,48 @@
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    top: 0;
+    align-content: flex-start;
+
+}
+.title-block {
+    align-content: center;
+}
+body>div {
+    text-align: center;
+    margin: 0;
+    align-items: flex-end;
+}
+h1,h2 {
+    margin: 0;
+}
+#tasks-container {
+
+}
+.task-container {
+    justify-content: center;
+}
+.to-do {
+    background-color: aquamarine;
+}
+.started {
+    background-color: yellow;
+}
+.complete {
+    background-color: yellowgreen;
+}
+
+.post-block {
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    width: 100vw;
+
+}
+.edit {
+    background-color: antiquewhite;
+}
+.delete {
+    background-color: grey;
+}

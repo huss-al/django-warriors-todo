@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '.herokuapp.com',
     '8000-hussal-djangowarriorsto-6swwmva6y1n.ws-eu114.gitpod.io',
+    '8000-hussal-djangowarriorsto-965yqnl9owp.ws.codeinstitute-ide.net',
     '8000-hussal-djangowarriorsto-5vz967jljk8.ws.codeinstitute-ide.net',
     'localhost',
     '127.0.0.1',
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -99,6 +101,7 @@ DATABASES = {
 CSRF_TRUSTED_ORIGINS = [
     "https://8000-hussal-djangowarriorsto-6swwmva6y1n.ws-eu114.gitpod.io",
     "https://8000-hussal-djangowarriorsto-5vz967jljk8.ws.codeinstitute-ide.net",
+    "https://8000-hussal-djangowarriorsto-965yqnl9owp.ws.codeinstitute-ide.net",
     "https://*.herokuapp.com"
 ]
 
@@ -137,6 +140,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
