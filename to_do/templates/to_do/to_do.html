@@ -51,27 +51,82 @@
         <div class="to-do task-container">
             <h1>To do</h1>
             {% for post in object_list %}
+            {% if post.status == 1 %}
             <div class="post-block">
                 <div>
                     <h2>{{ post.title }}</h2> 
                 </div>
                 <div>
-                    <p>{{ post.excerpt }}</p>
+                    <p>{{ post.description }}</p>
                 </div>
                 <div>
                     <p>Author: {{ post.author }}</p>
                 </div>
                 <div>
-                    <span class="edit">edit</span>
-                    <span class="started">Mark as</span>
-                    <span class="complete">Mark as</span>
-                    <span class="delete">delete</span>
+                    <span><button class="edit">edit</button></span>
+                    <span><button class="started">Mark as</button></span>
+                    <span><button class="complete">Mark as</button></span>
+                    <span><button class="delete">delete</button></span>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
 
         <!-- Add other task containers as needed (Started, Complete, etc.) -->
+
+
+        <div class="started task-container">
+            <h1>Started</h1>
+            {% for post in object_list%}
+            {% if post.status == 2 %}
+            <div class="post-block">
+                <div>
+                    <h2>{{ post.title }}</h2> 
+                </div>
+                <div>
+                    <p>{{ post.description }}</p>
+                </div>
+                <div>
+                    <p>Author: {{ post.author }}</p>
+                </div>
+                <div>
+                    <span><button class="edit">edit</button></span>
+                    <span><button class="to-do">Mark as</button></span>
+                    <span><button class="complete">Mark as</button></span>
+                    <span><button class="delete">delete</button></span>
+                </div>
+            </div> 
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="complete task-container">
+            <h1>Complete</h1>
+            {% for post in object_list %}
+            {% if post.status == 3 %}
+            <div class="post-block">
+                <div>
+                    <h2>{{ post.title }}</h2> 
+                </div>
+                <div>
+                    <p>{{ post.description }}</p>
+                </div>
+                <div>
+                    <p>Author: {{ post.author }}</p>
+                </div>
+                <div>
+                    <span><button class="edit">edit</button></span>
+                    <span><button class="to-do">Mark as</button></span>
+                    <span><button class="started">Mark as</button></span>
+                    <span><button class="delete">delete</button></span>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+
     </div>
 
     <!-- Footer -->
