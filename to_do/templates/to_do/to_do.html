@@ -39,9 +39,16 @@
                 </div>
                 <div>
                     <p>Author: {{ post.author }}</p>
+                    <p>id: {{ post.id }}</p>
                 </div>
                 <div>
-                    <span><button class="edit">edit</button></span>
+                    <div class="create-task">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit">Edit</button>
+                        </form>
+                    </div>
                     <span><button class="started">Mark as</button></span>
                     <span><button class="complete">Mark as</button></span>
                     <span><button class="delete">delete</button></span>
@@ -65,6 +72,7 @@
                 </div>
                 <div>
                     <p>Author: {{ post.author }}</p>
+                    <p>id: {{ post.id }}</p>
                 </div>
                 <div>
                     <span><button class="edit">edit</button></span>
@@ -90,6 +98,7 @@
                 </div>
                 <div>
                     <p>Author: {{ post.author }}</p>
+                    <p>id: {{ post.id }}</p>
                 </div>
                 <div>
                     <span><button class="edit">edit</button></span>
