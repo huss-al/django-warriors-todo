@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
+from to_do.views import registerpage, logout_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('', include("to_do.urls"), name='to_do_urls'),
+    path('login/', auth_views.LoginView.as_view(template_name='to_do/log_in.html'), name='login'),
+    path('register/', registerpage, name='register'),
+    path('logout/', logout_view, name='logout'),
+    path('', auth_views.LoginView.as_view(template_name='to_do/log_in.html'), name='home'),
+    path('to_do/', include('to_do.urls')),
 ]
