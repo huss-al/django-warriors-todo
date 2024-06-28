@@ -123,6 +123,7 @@ def logout_view(request):
     logout(request)
     return redirect('login')
 
+
 #delete
 def delete_post(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
@@ -132,3 +133,7 @@ def delete_post(request, post_id):
     # Handle GET request if needed, for confirmation or other actions
     # Typically, you would render a confirmation template for deletion
     return render(request, 'delete_confirmation.html', {'post': post})
+
+def log_out_confirmation(request):
+    return render(request, 'to_do/log_out_confirmation.html')
+

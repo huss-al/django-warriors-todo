@@ -12,4 +12,7 @@ urlpatterns = [
     path('post/<int:pk>/complete/', views.PostComplete.as_view(), name='post_complete'),
     path('post/<int:pk>/to_do/', views.Post_to_do.as_view(), name='post_to_do'),
 
+
+    path('log_out_confirmation/', views.log_out_confirmation, name='log_out_confirmation'),
+
 ]
