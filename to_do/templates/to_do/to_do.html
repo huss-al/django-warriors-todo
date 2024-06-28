@@ -29,6 +29,7 @@
         <div class="to-do task-container">
             <h1>To do</h1>
             {% for post in object_list %}
+            {% if post.status == 1 %}
             <div class="post-block">
                 <div>
                     <h2>{{ post.title }}</h2> 
@@ -46,13 +47,15 @@
                     <span class="delete">delete</span>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
 
         <!-- Add other task containers as needed (Started, Complete, etc.) -->
         <div class="started task-container">
             <h1>Started</h1>
-            {% for post in object_list %}
+            {% for post in object_list%}
+            {% if post.status == 2 %}
             <div class="post-block">
                 <div>
                     <h2>{{ post.title }}</h2> 
@@ -69,13 +72,15 @@
                     <span class="complete">Mark as</span>
                     <span class="delete">delete</span>
                 </div>
-            </div>
+            </div> 
+            {% endif %}
             {% endfor %}
         </div>
 
         <div class="complete task-container">
             <h1>Complete</h1>
             {% for post in object_list %}
+            {% if post.status == 3 %}
             <div class="post-block">
                 <div>
                     <h2>{{ post.title }}</h2> 
@@ -93,6 +98,7 @@
                     <span class="delete">delete</span>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
 
