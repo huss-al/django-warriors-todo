@@ -1,35 +1,43 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%static '/css/main.css'%}">
-    <title>Views Part 1</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>To Do List</title>
 </head>
-
 <body>
 
     <div class="title-block">
         <h1>Posts list</h1>
     </div>
-    
+
+    <!-- Display Create/Update Form -->
     <div id="tasks-container">
+        <div class="create-task">
+            <h2>Create Task</h2>
+            <form method="POST" action="{% url 'post_create' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Create Task</button>
+            </form>
+        </div>
+
+        <!-- Add existing tasks listing here -->
         <div class="to-do task-container">
             <h1>To do</h1>
             {% for post in object_list %}
             <div class="post-block">
                 <div>
-                <h2>{{post.title}}</h2> 
+                    <h2>{{ post.title }}</h2> 
                 </div>
                 <div>
-                    <p>{{post.excerpt}}</p>
+                    <p>{{ post.excerpt }}</p>
                 </div>
                 <div>
-                    <p>Author: {{post.author}}</p>
+                    <p>Author: {{ post.author }}</p>
                 </div>
                 <div>
                     <span class="edit">edit</span>
@@ -41,51 +49,9 @@
             {% endfor %}
         </div>
 
-        <div class="started task-container">
-            <h1>Started</h1>
-            {% for post in object_list %}
-            <div class="post-block">
-                <div>
-                <h2>{{post.title}}</h2> 
-                </div>
-                <div>
-                    <p>{{post.excerpt}}</p>
-                </div>
-                <div>
-                    <p>Author: {{post.author}}</p>
-                </div>
-                <div>
-                    <span class="edit">edit</span>
-                    <span class="to-do">Mark as</span>
-                    <span class="complete">Mark as</span>
-                    <span class="delete">delete</span>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+        <!-- Add other task containers as needed (Started, Complete, etc.) -->
 
-        <div class="complete task-container">
-            <h1>Complete</h1>
-            {% for post in object_list %}
-            <div class="post-block">
-                <div>
-                <h2>{{post.title}}</h2> 
-                </div>
-                <div>
-                    <p>{{post.excerpt}}</p>
-                </div>
-                <div>
-                    <p>Author: {{post.author}}</p>
-                </div>
-                <div>
-                    <span class="edit">edit</span>
-                    <span class="to-do">Mark as</span>
-                    <span class="started">Mark as</span>
-                    <span class="delete">delete</span>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
     </div>
-    
+
+</body>
 </html>
