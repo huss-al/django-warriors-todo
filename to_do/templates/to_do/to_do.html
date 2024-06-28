@@ -39,19 +39,26 @@
                 </div>
                 <div>
                     <p>Author: {{ post.author }}</p>
-                    <p>id: {{ post.id }}</p>
                 </div>
                 <div>
-                    <div class="create-task">
-                        <form method="POST">
+                    <span>
+                        <form method="post" action="{% url 'post_started' pk=post.id %}">
                             {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit">Edit</button>
+                            <button class="started" type="submit">Mark as started</button>
                         </form>
-                    </div>
-                    <span><button class="started">Mark as</button></span>
-                    <span><button class="complete">Mark as</button></span>
-                    <span><button class="delete">delete</button></span>
+                    </span>
+                    <span>
+                        <form method="post" action="{% url 'post_complete' pk=post.id %}">
+                        {% csrf_token %}
+                        <button class="complete" type="submit">Mark as Complete</button>
+                        </form>
+                    </span>
+                    <span>
+                        <form method="post" action="{% url 'post_delete' pk=post.id %}">
+                            {% csrf_token %}
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                    </span>
                 </div>
             </div>
             {% endif %}
@@ -72,13 +79,24 @@
                 </div>
                 <div>
                     <p>Author: {{ post.author }}</p>
-                    <p>id: {{ post.id }}</p>
                 </div>
                 <div>
-                    <span><button class="edit">edit</button></span>
-                    <span><button class="to-do">Mark as</button></span>
-                    <span><button class="complete">Mark as</button></span>
-                    <span><button class="delete">delete</button></span>
+                    <span>
+                        <form method="post" action="{% url 'post_to_do' pk=post.id %}">
+                        {% csrf_token %}
+                        <button class="to-do" type="submit">Mark as To-do</button>
+                        </form>
+                    </span>
+                    <span>
+                        <form method="post" action="{% url 'post_complete' pk=post.id %}">
+                        {% csrf_token %}
+                        <button class="complete" type="submit">Mark as Complete</button>
+                        </form>
+                    </span>
+                    <form method="post" action="{% url 'post_delete' pk=post.id %}">
+                        {% csrf_token %}
+                        <button class="delete" type="submit">Delete</button>
+                    </form>
                 </div>
             </div> 
             {% endif %}
@@ -98,13 +116,24 @@
                 </div>
                 <div>
                     <p>Author: {{ post.author }}</p>
-                    <p>id: {{ post.id }}</p>
                 </div>
                 <div>
-                    <span><button class="edit">edit</button></span>
-                    <span><button class="to-do">Mark as</button></span>
-                    <span><button class="started">Mark as</button></span>
-                    <span><button class="delete">delete</button></span>
+                    <span>
+                        <form method="post" action="{% url 'post_to_do' pk=post.id %}">
+                        {% csrf_token %}
+                        <button class="to-do" type="submit">Mark as To-do</button>
+                        </form>
+                    </span>
+                    <span>
+                        <form method="post" action="{% url 'post_started' pk=post.id %}">
+                        {% csrf_token %}
+                        <button class="started" type="submit">Mark as started</button>
+                        </form>
+                    </span>
+                    <form method="post" action="{% url 'post_delete' pk=post.id %}">
+                        {% csrf_token %}
+                        <button class="delete" type="submit">Delete</button>
+                    </form>
                 </div>
             </div>
             {% endif %}

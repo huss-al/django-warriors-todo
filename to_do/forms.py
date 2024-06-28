@@ -5,3 +5,10 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'description', 'status']
+
+class DeleteForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['id']
+
+
