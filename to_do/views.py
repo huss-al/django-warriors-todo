@@ -95,3 +95,6 @@ def registerpage(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+def log_out_confirmation(request):
+    return render(request, 'to_do/log_out_confirmation.html')

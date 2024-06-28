@@ -23,10 +23,7 @@
                 </div>
                 <div class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
-                        <form method="POST" action="{% url 'logout' %}">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-link nav-link" style="color: white;">Logout</button>
-                        </form>
+                        <a class="nav-link" href="{% url 'log_out_confirmation' %}">Logout</a>
                     {% else %}
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
                     {% endif %}
@@ -91,7 +88,7 @@
                         <i class="fab fa-twitter fa-2x"></i>
                     </a>
                     <a href="https://www.instagram.com" class="text-white">
-                        <i class="fa-brands fa-instagram fa-bounce"></i>
+                        <i class="fa-brands fa-instagram fa-bounce" aria-hidden="'true"></i>
                     </a>
                 </div>
                 </div>
@@ -110,6 +107,8 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-Ed8gTMwHZ2l41e5g60UibztLZKv2p6gqg/7zSeB4iqCkeGrKyM3eNqaorHmhtYp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FjY3iXeOr4KRWDYoUz2Kqmo3Xqv9tV+WB+QBCiqfBTEwwlF4d5/1pBCwJZlZ4MTg" crossorigin="anonymous"></script>
+</body>
 </body>
 </html>
